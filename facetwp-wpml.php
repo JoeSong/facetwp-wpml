@@ -59,6 +59,8 @@ class FWP_WPML
 
     // Index all languages
     function indexer_query_args( $args ) {
+        global $sitepress;
+        $sitepress->switch_lang('all');
         $args['suppress_filters'] = true; // query posts in all languages
         return $args;
     }
